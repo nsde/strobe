@@ -51,7 +51,8 @@ class GUI:
             tkinter.Label(win, text='\n'*space, font=(font(), 5), fg=theme()['bg'], bg=theme()['bg']).pack()
 
         def font(): # Fonts are os-dependent, this function handles that
-            return 'Yu Gothic' if os.name == 'nt' else 'URW Gothic'
+            return
+            #return 'Yu Gothic' if os.name == 'nt' else ''
 
         win = tkinter.Tk()
         set_title()
@@ -61,7 +62,7 @@ class GUI:
         separator(1)
         
         self.win = win
-        self.font = font
+        self.font = font()
         self.theme = theme
         self.set_size = set_size
         self.separator = separator
@@ -74,7 +75,7 @@ class GUI:
                 master=self.win,
                 text=text or f'{function.__name__}()',
                 command=function,
-                font=(self.font(), 20),
+                font=(self.font, 20),
                 fg=color or self.theme()['fg'],
                 bg=self.theme()['bg'],
                 relief='flat',

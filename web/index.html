@@ -4,7 +4,7 @@
 <head>
     <title>{{ title }} · {{ site }}</title>
 
-    <link href="https://onlix.me/lila.css" rel="stylesheet">
+    <link href="https://onlix.me/style/lila.css" rel="stylesheet">
 
     <meta charset="utf-8">
 
@@ -32,7 +32,6 @@
     <meta property="og:title" content="{{ title }} · {{ site }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/">
-    <meta property="article:published_time" content="2020-08-20T04:49:02.278Z">
     <meta property="article:author" content="{{ site }}">
     <meta property="article:section" content="website">
 
@@ -73,10 +72,10 @@
         
 
         {% for button in buttons %}
-            <a href="/action/{{ button.label }}">
-                <button><strong>{{ button.label }}</strong></button>
-            </a>
-            <br>
+            <form method="post" action="">
+                <button name="action" value="{{ button.label }}"><strong>{{ button.label }}</strong></button>
+                <br>
+            </form>
         {% endfor %}
     </main>
 

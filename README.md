@@ -1,10 +1,10 @@
-# ⚡ Strobe
-⚡ Strobe – turn your functions into into websites/GUI programs in a matter of seconds!  
+# <img src="logo.png" style="height: 50px;"> Strobe
+Turn your functions into whole websites/GUI programs in a matter of seconds! ⚡
 
 ## Create a Tkinter Window
 
 ```py
-from strobe import GUI
+from strobe.gui import GUI
 
 gui = GUI(title='Welcome to Strobe!') # Create a new window
 
@@ -18,6 +18,25 @@ def close():
 
 gui.start() # Runs the GUI program/window
 # /!\ Any code under gui.start() will run after the window has been CLOSED!
+```
+
+## Flask Website
+![](web.png)
+
+```py
+from strobe.web import Web
+
+web = Web(title='Web Demo') # create a Flask application
+
+@web.button(label='Say hi') # add a new button labelled "Say hi"
+def say_hi():
+    return 'Hello there!' # this message will be displayed when the button is clicked
+
+@web.button(label='Random number (1-10)') # add a new button labelled "Random number (1-10)"
+def random_number():
+    return random.randint(1, 10) # return a random number from 1 to 10
+
+web.start() # Start the Web server
 ```
 
 ## Disclaimer
