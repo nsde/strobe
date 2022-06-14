@@ -39,6 +39,40 @@ def random_number():
 web.start() # Start the Web server
 ```
 
+## Dish
+Dish is a fairly simple command line tool to create a new website!
+
+**input.dish**
+```
++
+
+nav
+    { /home | Home }
+    { /example | Example }
+.
+
+md
+    # Hello there!
+    This is a **markdown** *demo*!
+.
+
+html
+    <p>HTML works, too!</p>
+.
+
+-
+```
+
+**$**
+```sh
+$ python parse.py output --show
+$ python parse.py input output.html
+$ python parse.py input output --show
+$ python parse.py output --show --temp
+$ python parse.py input.html output.html --show --temp
+
+```
+
 ## Disclaimer
 The web feature is **not** made to be **secure**! Its main purpose is to be a tool for admins only.
 ### Make sure to keep the **web feature private**!

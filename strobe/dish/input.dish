@@ -1,0 +1,17 @@
++
+
+nav
+    { /home | Home }
+    { /example | Example }
+.
+
+md
+    # Hello there!
+    This is a **markdown** *demo*!
+.
+
+html
+    <p>HTML works, too!</p>
+.
+
+-
